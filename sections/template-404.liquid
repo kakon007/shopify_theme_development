@@ -1,0 +1,30 @@
+{{ '404-design.css' | asset_url | stylesheet_tag }}
+
+<div>
+  <div class="title">{{ section.settings.title }}</div>
+  <div>
+    <p class="subTitle">{{ section.settings.subTitle }}</p>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Template 404",
+    "tag": "section",
+    "class": "flex h-screen items-center justify-center",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "404"
+      },
+      {
+        "type": "text",
+        "id": "subTitle",
+        "label": "Sub Text",
+        "default": "This page could not be found"
+      }
+    ]
+  }
+{% endschema %}
